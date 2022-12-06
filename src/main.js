@@ -7,11 +7,15 @@ import BackToTop from 'vue-backtotop';
 const feather = require('feather-icons');
 feather.replace();
 
-createApp(App)
-	.use(router)
-	.use(BackToTop)
-	.mount('#app');
-
+const app=createApp(App);
+app.use(router)
+app.use(BackToTop)
+app.mount('#app');
+app.config.errorHandler = (err, instance, info) => {
+	console.log(err);
+	console.log(instance);
+	console.log(info);
+}
 const appTheme = localStorage.getItem('theme');
 
 // Check what is the active theme and change theme when user clicks on the theme button in header.
