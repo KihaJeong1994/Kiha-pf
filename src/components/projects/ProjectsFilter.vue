@@ -13,6 +13,7 @@ export default {
 				'Mobile Application',
 				'UI/UX Design',
 				'Branding & Anim',
+				'API Gateway',
 			],
 		},
 	},

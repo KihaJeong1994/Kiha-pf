@@ -31,16 +31,17 @@ export default {
 						class="font-general-regular text-ternary-dark dark:text-ternary-light"
 					>
 						<span>{{ info.title }}: </span>
-						<a
-							href="#"
+						<a v-if="info.title == 'Website'"
+							:href="info.details"
 							:class="
-								info.title == 'Website' || info.title == 'Phone'
+								info.title == 'Website' 
 									? 'hover:underline cursor-pointer'
 									: ''
 							"
 							aria-label="Project Website and Phone"
 							>{{ info.details }}</a
 						>
+						<a v-else>{{ info.details }}</a>
 					</li>
 				</ul>
 			</div>

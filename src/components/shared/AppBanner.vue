@@ -36,9 +36,9 @@ export default {
 			<p
 				class="font-general-medium mt-2 text-lg sm:text-xl  xl:text-2xl text-center sm:text-left leading-none text-gray-400"
 			>
-				A Full-Stack Developer & Design Enthusiast
+				A Backend Developer & DevOps Engineer
 			</p>
-			<div class="flex justify-center sm:block">
+			<!-- <div class="flex justify-center sm:block">
 				<a
 					download="Stoman-Resume.pdf"
 					href="/files/Stoman-Resume.pdf"
@@ -54,7 +54,7 @@ export default {
 						>Download CV</span
 					></a
 				>
-			</div>
+			</div> -->
 		</div>
 
 		<!-- Banner right illustration -->
