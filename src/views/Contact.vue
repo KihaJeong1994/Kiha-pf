@@ -13,17 +13,17 @@ export default {
 			contacts: [
 				{
 					id: 1,
-					name: 'Your Address, Your City, Your Country',
+					name: 'Suwon-si, Gyeonggi-do, Republic of Korea',
 					icon: 'map-pin',
 				},
 				{
 					id: 2,
-					name: 'email@domain.com',
+					name: 'jkha7371@gmail.com',
 					icon: 'mail',
 				},
 				{
 					id: 3,
-					name: '555 8888 888',
+					name: '010-2899-7371',
 					icon: 'phone',
 				},
 			],
