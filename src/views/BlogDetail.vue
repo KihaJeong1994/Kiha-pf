@@ -15,13 +15,14 @@ onMounted(async () => {
   data.value = await getPageBlocks(pageId as string)
   console.log(data)
 })
-onBeforeRouteUpdate(async (to) => {
-  let pageId = to.params.id;
-  if(pageId === undefined){
-	pageId = 'ac8bed9a5af24ff08ec5b63e28964216'
+onBeforeRouteUpdate(async (to,from) => {
+  if(to.params.id!==from.params.id){
+    let pageId = to.params.id;
+    if(pageId === undefined){
+      pageId = 'ac8bed9a5af24ff08ec5b63e28964216'
+    }
+    data.value = await getPageBlocks(pageId as string)
   }
-  data.value = await getPageBlocks(pageId as string)
-  console.log(data)
 })
 
 // ---- or using Composables ----
