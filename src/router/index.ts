@@ -60,13 +60,31 @@ const routes = [
 			title: 'Stoman - Contact',
 		},
 	},
+	{
+		path: '/blog',
+		name: 'blog',
+		component: () =>
+			import(/* webpackChunkName: "about" */ '../views/Blog.vue'),
+		meta: {
+			title: 'Kiha - Blog',
+		},
+	},
+	{
+		path: '/blog/:id',
+		name: 'blog-id',
+		component: () =>
+			import(/* webpackChunkName: "about" */ '../views/Blog.vue'),
+		meta: {
+			title: 'Kiha - Blog',
+		},
+	},
 ];
 
 const router = createRouter({
 	history: createWebHistory(process.env.BASE_URL),
 	routes,
 	scrollBehavior() {
-		document.getElementById('app').scrollIntoView();
+		document.getElementById('app')?.scrollIntoView();
 	},
 });
 
@@ -100,20 +118,21 @@ router.beforeEach((to, from, next) => {
 
 	// If a route with a title was found, set the document (page) title to that value.
 	if (nearestWithTitle) {
-		document.title = nearestWithTitle.meta.title;
+		document.title = nearestWithTitle.meta.title as string;
 	} else if (previousNearestWithMeta) {
-		document.title = previousNearestWithMeta.meta.title;
+		document.title = previousNearestWithMeta.meta.title as string;
 	}
 
 	// Remove any stale meta tags from the document using the key attribute we set below.
 	Array.from(
 		document.querySelectorAll('[data-vue-router-controlled]')
-	).map((el) => el.parentNode.removeChild(el));
+	).map((el) => el.parentNode?.removeChild(el));
 
 	// Skip rendering meta tags if there are none.
 	if (!nearestWithMeta) return next();
 
 	// Turn the meta tag definitions into actual elements in the head.
+	if(Array.isArray(nearestWithMeta.meta.metaTags))
 	nearestWithMeta.meta.metaTags
 		.map((tagDef) => {
 			const tag = document.createElement('meta');

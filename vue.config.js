@@ -1,4 +1,6 @@
 module.exports = {
-    publicPath: '/Kiha-pf/',
-    outputDir: 'dist' 
+    publicPath: process.env.NODE_ENV ==='production'
+    ?'/Kiha-pf/'
+    :'/',
+    outputDir: 'dist'
 }
