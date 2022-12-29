@@ -132,6 +132,11 @@ export default {
 								details:
 									'4. Dual DB : use either Spring Data JPA or Spring Data MongoDB to manage data with one service logic',
 							},
+							{
+								id: 5,
+								details:
+									'5. DevOps : deploy api gateway solution on AWS EKS environment and manage kubernetes objects like Pod, Service, StatefulSet, Ingress, etc ',
+							},
 						],
 					},
 				]
