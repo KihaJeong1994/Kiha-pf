@@ -1,5 +1,5 @@
 <script>
-import ThemeSwitcher from '../ThemeSwitcher';
+// import ThemeSwitcher from '../ThemeSwitcher';
 import HireMeModal from '../HireMeModal.vue';
 import feather from 'feather-icons';
 import AppHeaderLinks from './AppHeaderLinks.vue';
@@ -7,7 +7,7 @@ import Button from '../reusable/Button.vue';
 
 export default {
 	components: {
-		ThemeSwitcher,
+		// ThemeSwitcher,
 		HireMeModal,
 		AppHeaderLinks,
 		Button,
@@ -87,7 +87,7 @@ export default {
 					<router-link to="/"
 						><img
 							v-if="theme === 'light'"
-							src="@/assets/images/logo-dark.svg"
+							src="@/assets/images/twitter_header_photo_2.png"
 							class="w-36"
 							alt="Dark Logo"
 						/>
@@ -101,11 +101,11 @@ export default {
 				</div>
 
 				<!-- Theme switcher small screen -->
-				<theme-switcher
+				<!-- <theme-switcher
 					:theme="theme"
 					@themeChanged="updateTheme"
 					class="block sm:hidden bg-ternary-light dark:bg-ternary-dark hover:bg-hover-light dark:hover:bg-hover-dark hover:shadow-sm px-2.5 py-2 rounded-lg"
-				/>
+				/> -->
 
 				<!-- Small screen hamburger menu -->
 				<div class="sm:hidden">
@@ -154,11 +154,11 @@ export default {
 				</div>
 
 				<!-- Theme switcher large screen -->
-				<theme-switcher
+				<!-- <theme-switcher
 					:theme="theme"
 					@themeChanged="updateTheme"
 					class="ml-8 bg-primary-light dark:bg-ternary-dark px-3 py-2 shadow-sm rounded-xl cursor-pointer"
-				/>
+				/> -->
 			</div>
 		</div>
 
