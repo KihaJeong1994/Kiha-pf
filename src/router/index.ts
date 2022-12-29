@@ -73,7 +73,7 @@ const routes = [
 		path: '/blog/:id',
 		name: 'blog-id',
 		component: () =>
-			import(/* webpackChunkName: "about" */ '../views/Blog.vue'),
+			import(/* webpackChunkName: "about" */ '../views/BlogDetail.vue'),
 		meta: {
 			title: 'Kiha - Blog',
 		},

@@ -1,12 +1,25 @@
 <script setup lang="ts">
 import { NotionRenderer,getPageBlocks } from "vue3-notion";
 import { ref, onMounted } from "vue";
+import { onBeforeRouteUpdate, useRoute } from "vue-router";
 import { mapPageUrl ,pageLinkOptions} from "../lib/props"
 
-const data = ref()
+const route = useRoute()
+let data = ref()
 
 onMounted(async () => {
-	let pageId = 'ac8bed9a5af24ff08ec5b63e28964216'
+  let pageId = route.params.id;
+  if(pageId === undefined){
+	pageId = 'ac8bed9a5af24ff08ec5b63e28964216'
+  }
+  data.value = await getPageBlocks(pageId as string)
+  console.log(data)
+})
+onBeforeRouteUpdate(async (to) => {
+  let pageId = to.params.id;
+  if(pageId === undefined){
+	pageId = 'ac8bed9a5af24ff08ec5b63e28964216'
+  }
   data.value = await getPageBlocks(pageId as string)
   console.log(data)
 })
