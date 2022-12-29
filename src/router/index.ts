@@ -78,15 +78,6 @@ const routes = [
 			title: 'Kiha - Blog',
 		},
 	},
-	{
-		path: '/Kiha-pf/blog/:id',
-		name: 'Kiha-pf-blog-id',
-		component: () =>
-			import(/* webpackChunkName: "about" */ '../views/Blog.vue'),
-		meta: {
-			title: 'Kiha - Blog',
-		},
-	},
 ];
 
 const router = createRouter({
