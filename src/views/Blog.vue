@@ -6,7 +6,7 @@ import { mapPageUrl ,pageLinkOptions} from "../lib/props"
 const data = ref()
 
 onMounted(async () => {
-	let pageId = 'ac8bed9a5af24ff08ec5b63e28964216'
+	let pageId = 'a7aeea0527a143a389b84208b9811c17'
   data.value = await getPageBlocks(pageId as string)
   console.log(data)
 })

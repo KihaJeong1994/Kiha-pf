@@ -9,9 +9,6 @@ let data = ref()
 
 onMounted(async () => {
   let pageId = route.params.id;
-  if(pageId === undefined){
-	pageId = 'ac8bed9a5af24ff08ec5b63e28964216'
-  }
   data.value = await getPageBlocks(pageId as string)
   console.log(data)
 })
