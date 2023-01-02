@@ -16,6 +16,16 @@ jobs:
         uses: actions/setup-node@main
         with:
           node-version: 17.x
+      - name: Generate Environment Variables File for Production
+        run: |
+          echo "VUE_APP_EMAIL_JS_SERVICE_ID=$VUE_APP_EMAIL_JS_SERVICE_ID" >> .env.production
+          echo "VUE_APP_EMAIL_JS_TEMPLATE_ID=$VUE_APP_EMAIL_JS_TEMPLATE_ID" >> .env.production
+          echo "VUE_APP_EMAIL_JS_PUBLIC_KEY=$VUE_APP_EMAIL_JS_PUBLIC_KEY" >> .env.production
+        env:
+          NODE_ENV: production
+          VUE_APP_EMAIL_JS_SERVICE_ID: ${{ secrets.VUE_APP_EMAIL_JS_SERVICE_ID }}
+          VUE_APP_EMAIL_JS_TEMPLATE_ID: ${{ secrets.VUE_APP_EMAIL_JS_TEMPLATE_ID }}
+          VUE_APP_EMAIL_JS_PUBLIC_KEY: ${{ secrets.VUE_APP_EMAIL_JS_PUBLIC_KEY }}
       - name: Install dependencies
         run: npm install
       - name: Build Page
