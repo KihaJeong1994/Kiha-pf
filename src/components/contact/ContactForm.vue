@@ -13,8 +13,8 @@ export default {
 	methods: {
 		sendEmail(){
 			try{
-				emailjs.sendForm('service_c1930vs', 'template_0hnti8r', this.$refs.form,
-								'C6AdCkCw3aI2UQNLF', )
+				emailjs.sendForm(process.env.VUE_APP_EMAIL_JS_SERVICE_ID, process.env.VUE_APP_EMAIL_JS_TEMPLATE_ID, this.$refs.form,
+				process.env.VUE_APP_EMAIL_JS_PUBLIC_KEY, )
 			}catch(error){
 				console.log(error);
 			}
