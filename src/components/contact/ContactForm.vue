@@ -1,28 +1,51 @@
 <script>
 // import Button from '../reusable/Button.vue';
+import ResultModal from '../ResultModal.vue';
 export default { 
 	// components: { Button },
+	components: { ResultModal },
 	data() {
 		return {
 			name : '',
 			email: '',
 			message: '',
-			subject:''
+			subject:'',
+			myModal: false,
+			modalText: '',
 		}
 	}, 
 	methods: {
+		openModal(sttus) {
+			if(sttus == '200'){
+				this.modalText = 'Email has been successfully sent';
+			}else{
+				this.modalText = 'Failed to send email. Please send email to jkha7371@gmail.com';
+			}
+			this.myModal = true
+		},
+		closeModal() {
+			this.myModal = false
+		},
 		sendEmail(){
 			try{
 				emailjs.sendForm(process.env.VUE_APP_EMAIL_JS_SERVICE_ID, process.env.VUE_APP_EMAIL_JS_TEMPLATE_ID, this.$refs.form,
 				process.env.VUE_APP_EMAIL_JS_PUBLIC_KEY, )
+				.then((response) =>{
+					console.log('SUCCESS!', response.status, response.text);
+					this.openModal(response.status);
+				}, (error)=> {
+					console.log('FAILED...', error);
+					this.openModal(error);
+				});
 			}catch(error){
 				console.log(error);
+				this.openModal(error);
 			}
 			this.name = ''
 			this.email = ''
 			this.message = ''
 			this.subject = ''
-		}
+		},
 	},
 };
 import emailjs from "emailjs-com";
@@ -118,6 +141,11 @@ import emailjs from "emailjs-com";
 					/>
 				</div>
 			</form>
+		</div>
+		<div class="example-modal-window">
+			<!-- 컴포넌트 ResultModal -->
+			<ResultModal @close="closeModal" :modalText="modalText" v-if="myModal">
+			</ResultModal>
 		</div>
 	</div>
 </template>
