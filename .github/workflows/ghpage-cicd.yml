@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@main
         with:
           node-version: 17.x
-      - name: Generate Environment Variables File for Production
+      - name: Generate Environment Variables File for Production #generate env
         run: |
           echo "VUE_APP_EMAIL_JS_SERVICE_ID=$VUE_APP_EMAIL_JS_SERVICE_ID" >> .env.production
           echo "VUE_APP_EMAIL_JS_TEMPLATE_ID=$VUE_APP_EMAIL_JS_TEMPLATE_ID" >> .env.production
