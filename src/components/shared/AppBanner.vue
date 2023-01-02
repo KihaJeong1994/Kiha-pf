@@ -36,7 +36,7 @@ export default {
 			<p
 				class="font-general-medium mt-2 text-lg sm:text-xl  xl:text-2xl text-center sm:text-left leading-none text-gray-400"
 			>
-				A Backend Developer & DevOps Engineer
+				A Full-Stack Developer & DevOps Engineer
 			</p>
 			<!-- <div class="flex justify-center sm:block">
 				<a
