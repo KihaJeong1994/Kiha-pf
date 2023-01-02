@@ -99,23 +99,23 @@ export default {
 							{
 								id: 1,
 								details:
-									'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+									'BEAST is an API gateway solution for digital transformantion. You can easily register, update, delete, and manage API with BEAST. You can add some custom filters to handle your API in the run time. These custome filters can be developed on web-based IDE.',
 							},
 							{
 								id: 2,
 								details:
-									'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+									'BEAST provides you a great dashboard that helps you monitor the API gateway and detect the anomaly. Of course you can achieve load balancing, log tracking, and fault tolerance with BEAST',
 							},
 						],
 					},
 					{
 						id:2,
-						projectDetailsHeading: 'Role',
+						projectDetailsHeading: 'My Role',
 						projectDetails: [
 							{
 								id: 1,
 								details:
-									'1. Spring Cloud Gateway Filters : developed non-blocking filters for api gateway such as prefilter, postfilter, auth filter, rate limiting filter, etc ',
+									'1. Developing Spring Cloud Gateway Filters : developed non-blocking filters for api gateway such as prefilter, postfilter, auth filter, rate limiting filter, etc ',
 							},
 							{
 								id: 2,
