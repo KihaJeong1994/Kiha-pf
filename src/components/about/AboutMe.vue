@@ -11,7 +11,13 @@ export default {
 				{
 					id: 2,
 					bio:
-						'Building my portfolio',
+						`When I first learned programming, I wanted to be a technician. But, as I read the book about Steve Jobs, I realized that user experience is as important as background technology. So I decided to use what I learned to 
+						build portfolio, service, and application, etc.`,
+				},
+				{
+					id: 3,
+					bio:
+						`My goal is to realize imagination into reality by my technology. Also, I'm interested in automation and reducing repetition`,
 				},
 			],
 		};
