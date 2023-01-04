@@ -37,12 +37,7 @@ body {
   box-sizing: border-box;
   text-align: left;
 }
-.notion-text {
-    text-align: left;
-}
-.notion-list li {
-    padding: 6px 0;
-    white-space: pre-wrap;
-    text-align: left;
+.notion{
+  text-align: left;
 }
 </style>
