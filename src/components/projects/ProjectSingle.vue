@@ -12,7 +12,7 @@ export default {
 	>
 		<div>
 			<img
-				:src="project.img"
+				:src="require(`@/assets/images/${project.img}`)"
 				:alt="project.title"
 				class="rounded-t-xl border-none"
 			/>

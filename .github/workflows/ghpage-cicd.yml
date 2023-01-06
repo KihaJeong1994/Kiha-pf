@@ -21,11 +21,13 @@ jobs:
           echo "VUE_APP_EMAIL_JS_SERVICE_ID=$VUE_APP_EMAIL_JS_SERVICE_ID" >> .env.production
           echo "VUE_APP_EMAIL_JS_TEMPLATE_ID=$VUE_APP_EMAIL_JS_TEMPLATE_ID" >> .env.production
           echo "VUE_APP_EMAIL_JS_PUBLIC_KEY=$VUE_APP_EMAIL_JS_PUBLIC_KEY" >> .env.production
+          echo "VUE_APP_BACKEND_DOMAIN=$VUE_APP_BACKEND_DOMAIN" >> .env.production
         env:
           NODE_ENV: production
           VUE_APP_EMAIL_JS_SERVICE_ID: ${{ secrets.VUE_APP_EMAIL_JS_SERVICE_ID }}
           VUE_APP_EMAIL_JS_TEMPLATE_ID: ${{ secrets.VUE_APP_EMAIL_JS_TEMPLATE_ID }}
           VUE_APP_EMAIL_JS_PUBLIC_KEY: ${{ secrets.VUE_APP_EMAIL_JS_PUBLIC_KEY }}
+          VUE_APP_BACKEND_DOMAIN: ${{ secrets.VUE_APP_BACKEND_DOMAIN }}
       - name: Install dependencies
         run: npm install
       - name: Build Page
@@ -35,6 +37,7 @@ jobs:
           VUE_APP_EMAIL_JS_SERVICE_ID: ${{ secrets.VUE_APP_EMAIL_JS_SERVICE_ID }}
           VUE_APP_EMAIL_JS_TEMPLATE_ID: ${{ secrets.VUE_APP_EMAIL_JS_TEMPLATE_ID }}
           VUE_APP_EMAIL_JS_PUBLIC_KEY: ${{ secrets.VUE_APP_EMAIL_JS_PUBLIC_KEY }}
+          VUE_APP_BACKEND_DOMAIN: ${{ secrets.VUE_APP_BACKEND_DOMAIN }}
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
