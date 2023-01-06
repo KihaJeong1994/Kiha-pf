@@ -44,7 +44,7 @@ export default {
 		},
 		async getProjects(){
 			try{
-				await axios.get('https://cors-anywhere.herokuapp.com/'+process.env.VUE_APP_BACKEND_DOMAIN+'/api/projects')
+				await axios.get(process.env.VUE_APP_BACKEND_DOMAIN+'/api/projects')
 							.then((response)=>{
 								this.projects = response.data;
 							})
