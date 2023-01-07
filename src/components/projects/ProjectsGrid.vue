@@ -2,14 +2,14 @@
 import feather from 'feather-icons';
 import ProjectsFilter from './ProjectsFilter.vue';
 import ProjectSingle from './ProjectSingle.vue';
-import axios from "axios";
-// import projects from "../data/projects";
+// import axios from "axios";
+import projects from "../../data/projects";
 
 export default {
 	components: { ProjectSingle, ProjectsFilter },
 	data: () => {
 		return {
-			projects:[],
+			projects,
 			projectsHeading: 'Projects Portfolio',
 			selectedCategory: '',
 			searchProject: '',
@@ -42,23 +42,23 @@ export default {
 			let project = new RegExp(this.searchProject, 'i');
 			return this.projects.filter((el) => el.title.match(project));
 		},
-		async getProjects(){
-			try{
-				await axios.get(process.env.VUE_APP_BACKEND_DOMAIN+'/api/projects')
-							.then((response)=>{
-								this.projects = response.data;
-							})
-							.catch((error)=>{
-								console.log(error);
-							});
-			} 
-			catch(error){
-				console.error(error);
-			}
-		}
+		// async getProjects(){
+		// 	try{
+		// 		await axios.get(process.env.VUE_APP_BACKEND_DOMAIN+'/api/projects')
+		// 					.then((response)=>{
+		// 						this.projects = response.data;
+		// 					})
+		// 					.catch((error)=>{
+		// 						console.log(error);
+		// 					});
+		// 	} 
+		// 	catch(error){
+		// 		console.error(error);
+		// 	}
+		// }
 	},
 	mounted() {
-		this.getProjects();
+		// this.getProjects();
 		feather.replace();
 	},
 };
