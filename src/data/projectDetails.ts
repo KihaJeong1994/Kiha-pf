@@ -3,7 +3,7 @@ const projectDetails = [
         id: 1,
         singleProjectHeader: {
             singleProjectTitle: 'ktds API Gateway Solution',
-            singleProjectDate: 'April, 2022 ~ September, 2022',
+            singleProjectDate: 'April, 2022 ~ November, 2022',
             singleProjectTag: 'Backend',
         },
         projectImages: [
@@ -226,28 +226,35 @@ const projectDetails = [
                 {
                     id: 3,
                     title: 'Website',
-                    details: 'https://ktds.com',
+                    details: 'https://www.ikosmo.co.kr/',
                 },
                 {
                     id: 4,
                     title: 'Phone',
-                    details: '02-523-7029',
+                    details: '02-2025-4113',
                 },
             ],
             objectivesHeading: 'Objective',
             objectivesDetails:
-                'to process the large traffic and provide API integrated management service',
+                'provide a dating service based on personality and character',
             technologies: [
                 {
                     title: 'Tools & Technologies',
                     techs: [
-                        'Mysql',
-                        'Spring Data JPA',
-                        'Spring Data MongoDB',
+                        'Spring MVC',
+                        'Django',
+                        'Oracle',
                         'EC2',
+                        'numpy',
+                        'matplotlib',
+                        'pandas',
+                        'beautifulsoup',
+                        'sklearn',
+                        'tensorflow2',
                         'HTML',
                         'CSS',
                         'JavaScript',
+                        'Jquery'
                     ],
                 },
             ],
@@ -259,12 +266,12 @@ const projectDetails = [
                         {
                             id: 1,
                             details:
-                                'BEAST is an API gateway solution for digital transformantion. You can easily register, update, delete, and manage API with BEAST. You can add some custom filters to handle your API in the run time. These custome filters can be developed on web-based IDE.',
+                                'Ting is a machine learning based ideal matching service. This service provides you a customized character based on your self-introduction text.',
                         },
                         {
                             id: 2,
                             details:
-                                'BEAST provides you a great dashboard that helps you monitor the API gateway and detect the anomaly. Of course you can achieve load balancing, log tracking, and fault tolerance with BEAST',
+                                'Also, Ting recommends you the one that is similar to whom you chose. This project was a final project of my developer curriculum.',
                         },
                     ],
                 },
@@ -275,56 +282,31 @@ const projectDetails = [
                         {
                             id: 1,
                             details:
-                                '1. Developing Spring Cloud Gateway Filters : developed non-blocking filters for api gateway such as prefilter, postfilter, auth filter, rate limiting filter, etc ',
+                                '1. Development environment construction : AWS EC2',
                         },
                         {
                             id: 2,
                             details:
-                                '2. DB & Memory Synchronization : fetches DB data periodically by Sceduler, and manage data in memory for performance',
+                                '2. Database design : used oracle for relational database',
                         },
                         {
                             id: 3,
                             details:
-                                '3. Distributed Performance Test : build Jmeter master, slave servers in AWS EC2, and performed the distributed performance testing for several times. monitors api gateway performance by Visual VM ',
+                                '3. Building admin page : provide some statistical information for admin user using django framework',
                         },
                         {
                             id: 4,
                             details:
-                                '4. Dual DB : use either Spring Data JPA or Spring Data MongoDB to manage data with one service logic',
+                                '4. Development of self-introduction classification service: data crawling, building classification model, etc',
                         },
                         {
                             id: 5,
                             details:
-                                '5. DevOps : deploy api gateway solution on AWS EKS environment and manage kubernetes objects like Pod, Service, StatefulSet, Ingress, etc ',
+                                '5. Recommendation service based on the selection you chose : used data from database and calculate cosine similarity between members',
                         },
                     ],
                 },
             ]
-        },
-        relatedProject: {
-            relatedProjectsHeading: 'Related Projects',
-            relatedProjects: [
-                {
-                    id: 1,
-                    title: 'Mobile UI',
-                    img: require('@/assets/images/mobile-project-1.jpg'),
-                },
-                {
-                    id: 2,
-                    title: 'Web Application',
-                    img: require('@/assets/images/web-project-1.jpg'),
-                },
-                {
-                    id: 3,
-                    title: 'UI Design',
-                    img: require('@/assets/images/ui-project-2.jpg'),
-                },
-                {
-                    id: 4,
-                    title: 'Kabul Mobile App UI',
-                    img: require('@/assets/images/mobile-project-2.jpg'),
-                },
-            ],
         },
     },
     
