@@ -6,18 +6,49 @@ export default {
 				{
 					id: 1,
 					bio:
-						'Hello, my name is Kiha Jeong',
+						`Hello, I am Kiha Jeong, a constantly evolving developer.`,
 				},
 				{
 					id: 2,
 					bio:
-						`When I first learned programming, I wanted to be a technician. But, as I read the book about Steve Jobs, I realized that user experience is as important as background technology. So I decided to use what I learned to 
-						build portfolio, service, and application, etc.`,
+						`I believe that being a developer is not just a job of writing code, but a job of solving given problems by appropriately utilizing software and hardware. Therefore, I aim to become a problem solver who deeply thinks and persistently digs into the encountered problems, rather than a developer who superficially experiences numerous technology stacks. If the problems I solve can be helpful to users and even the world, that would be great.
+Currently, I am responsible for the backend part and developing solutions at my company.`
+,
 				},
 				{
 					id: 3,
 					bio:
-						`My goal is to realize imagination into reality by my technology. Also, I'm interested in automation and reducing repetition`,
+						`My work and achievements include:`,
+				},
+				{
+					id: 4,
+					bio:
+						`- Developing an asynchronous, non-blocking API gateway solution`,
+				},
+				{
+					id: 5,
+					bio:
+						`- Developing and testing APIs`
+				},
+				{
+					id: 6,
+					bio:
+						`- Building and testing a performance testing environment in the AWS environment, resulting in a 30% performance improvement`
+				},
+				{
+					id: 7,
+					bio:
+						`- Designing features such as WebSocket integration and multi-tenancy`,
+				},
+				{
+					id: 8,
+					bio:
+						`I want to contribute to implementing services that solve customer inconveniences and benefit the world. `,
+				},
+				{
+					id: 8,
+					bio:
+						`'Let's make a dent in the universe.'`,
 				},
 			],
 		};
