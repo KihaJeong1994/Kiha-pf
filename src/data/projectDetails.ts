@@ -3,7 +3,7 @@ const projectDetails = [
         id: 1,
         singleProjectHeader: {
             singleProjectTitle: 'ktds API Gateway Solution',
-            singleProjectDate: 'April, 2022 ~ November, 2022',
+            singleProjectDate: 'April, 2022 ~ December, 2022',
             singleProjectTag: 'Backend',
         },
         projectImages: [
